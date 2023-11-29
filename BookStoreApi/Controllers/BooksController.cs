@@ -15,7 +15,7 @@ public class BooksController : ControllerBase
     public async Task<List<Book>> Get() =>
         await _booksService.GetAsync();
 
-    [HttpGet("{id:lenght(24)}")]
+    [HttpGet("{id:length(24)}")]
     public async Task<ActionResult<Book>> Get(string id)
     {
         var book = await _booksService.GetAsync(id);
